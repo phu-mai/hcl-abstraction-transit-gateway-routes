@@ -1,11 +1,15 @@
-# VPC TGW BASE
+# TGW ABSTRACTION LAYER
+The Transit Gate Way abstracion layer is enabled you to easily to: 
+* Added your destination vpc attachment to TGW.
+* Updated TGW route table.
+* Updated VPC route table.
 
 ## Example:
 
 ```
 Running with static_routes routes
 module "tgw_vpc_route" {
-  source = "git::git@github.com:cxagroup/infra-terraform-modules.git//transit-gateway-routes"
+  source = "./transit-gateway-routes"
   name                           = "cxagroup"
   region                         = "ap-southeast-1"
   transit_gateway_id             = "tgw-0f7977fxxxxxxxx"
